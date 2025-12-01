@@ -489,9 +489,35 @@
                         }
                     }
                 </style>
-                <div class="html-aSoBfY6581545-element">
-                    <div><span class="xl"></span> gente mirando ahora...</div>
-                </div>
+               <div class="html-aSoBfY6581545-element">
+    <div><span class="xl"></span> gente mirando ahora...</div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const elemento = document.querySelector(".html-aSoBfY6581545-element .xl");
+
+    if (!elemento) return;
+
+    function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    // Primeiros segundos: oscila 300–600
+    let intervaloInicial = setInterval(() => {
+        elemento.textContent = getRandom(300, 600);
+    }, 1200);
+
+    // Após 7 segundos, estabiliza 500–600
+    setTimeout(() => {
+        clearInterval(intervaloInicial);
+
+        setInterval(() => {
+            elemento.textContent = getRandom(500, 600);
+        }, 1500);
+    }, 7000);
+});
+</script>
             </div>
         </div>
     </div>
@@ -1204,13 +1230,6 @@
     </div>
     
 
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=465431446378802&ev=PageView&noscript=1"></noscript>
-    <script src="js/yggrcJ3557278.js" charset="utf-8"></script>
-    <script type="text/javascript"
-        defer="defer">document.body.appendChild(Object.assign(document.createElement("script"), { src: "https://cdn.atomicatpages.net/cdn/a.js?cache=" + Math.floor(1e5 * Math.random()), async: !0, defer: !0 }))</script>
-    <script type="text/javascript"
-        defer="defer">document.body.appendChild(Object.assign(document.createElement("script"), { src: "https://cdn.atomicatpages.net/cdn/atomicpixel.js?cache=" + Math.floor(1e5 * Math.random()), async: !0, defer: !0 }))</script>
-</body>
+   
 
 </html>
